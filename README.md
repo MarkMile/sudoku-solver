@@ -69,7 +69,7 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 - Filled board with numbers:
 
     ![filled board](https://github.com/MarkMile/sudoku-solver/blob/main/screenshots/filled_board.png?raw=true)<br>
-- Solved board:
+- Solved Sudoku puzzle:
 
     ![solved](https://github.com/MarkMile/sudoku-solver/blob/main/screenshots/solved.png?raw=true)
 
