@@ -45,7 +45,7 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 
 ## 📦 Installation
 1. Clone the repository:<br>
-    `git clone https://github.com/your-username/sudoku-solver.git`<br>
+    `git clone https://github.com/MarkMile/sudoku-solver.git`<br>
     `cd sudoku-solver`
 
 2. Install dependencies<br>
