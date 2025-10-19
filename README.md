@@ -1,8 +1,8 @@
 # Sudoku Solver
 
-A visual Sudoku solver built with Python and CustomTkinter, featuring a clean modern interface, puzzle validation, and a step-by-step solving visualization powered by a backtracking algorithm.
+A visual **Sudoku solver** built with **Python** and **CustomTkinter**, featuring a clean modern interface, puzzle validation, and a step-by-step solving visualization powered by a **backtracking algorithm**.
 
-Designed for Sudoku enthusiasts who enjoy both playing and understanding how puzzles can be solved programmatically.
+Designed for **Sudoku enthusiasts** who enjoy both playing and understanding how puzzles can be solved programmatically.
 
 ## 💡 Project Motivation
 I’ve always enjoyed solving Sudoku puzzles — and so does my wife.
@@ -12,11 +12,11 @@ This project started as a fun way for us to combine that shared interest with my
 It became a great learning exercise in algorithm design, GUI development, and writing clean, modular Python code while building something enjoyable and interactive.
 
 ## 🚀 Features
-- 🖥️ Modern GUI with CustomTkinter – sleek, responsive, and user-friendly
-- 🧠 Backtracking Algorithm – solves puzzles efficiently and recursively
-- 🧾 Input Validation – checks if the entered puzzle follows Sudoku rules
-- 🔘 Solve & Reset Buttons – simple and clean controls
-- 💡 Modular Codebase – clearly separated logic, GUI, and validation components
+- 🖥️ **Modern GUI with CustomTkinter** – sleek, responsive, and user-friendly
+- 🧠 **Backtracking Algorithm** – solves puzzles efficiently and recursively
+- 🧾 **Input Validation** – checks if the entered puzzle follows Sudoku rules
+- 🔘 **Solve & Reset Buttons** – simple and clean controls
+- 💡 **Modular Codebase** – clearly separated logic, GUI, and validation components
 
 ## 🧩 How It Works
 This program uses a backtracking algorithm, a depth-first search technique that:
