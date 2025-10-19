@@ -73,4 +73,5 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 - Improved UI/UX with sound and animations
 
 ## 🧑‍💻 Author
-#### **Marko Miletic**
+**Marko Miletic**<br>
+📫[LinkedIn](https://www.linkedin.com/in/marko1987/)
