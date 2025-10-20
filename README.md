@@ -36,10 +36,14 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 
 `sudoku-solver/`<br>
 `│`<br>
-`├── main.py             # Entry point; initializes the GUI and application`<br>
-`├── sudoku_gui.py       # Handles all CustomTkinter GUI elements and layout`<br>
-`├── solving_logic.py    # Contains the backtracking algorithm and solving logic`<br>
-`├── input_validator.py  # Validates Sudoku inputs and ensures puzzle correctness`<br>
+`├── main.py             # Launches the app`<br>
+`├── sudoku_gui.py       # Handles CustomTkinter GUI`<br>
+`├── solving_logic.py    # Backtracking solver logic`<br>
+`├── input_validator.py  # Validates Sudoku inputs`<br>
+`│`<br>
+`├── icons/              # App icons`<br>
+`├── screenshots/        # App screenshots`<br>
+`│`<br>
 `└── README.md`<br>
 
 
