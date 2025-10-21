@@ -1,4 +1,4 @@
-# sudoku-solver (CustomTkinter)
+# Sudoku Solver (CustomTkinter)
 
 A visual **Sudoku solver** built with **Python** and **CustomTkinter**, featuring a clean modern interface, puzzle validation, and a step-by-step solving visualization powered by a **backtracking algorithm**.
 
