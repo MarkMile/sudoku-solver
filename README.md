@@ -67,15 +67,8 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 | 🔁 **Reset**         | Clears all cells and resets the board   |
 
 ## 📷 Preview
-- Empty board:
 
-    ![empty board](https://github.com/MarkMile/sudoku-solver/blob/main/screenshots/empty_board.png?raw=true)<br>
-- Filled board with numbers:
-
-    ![filled board](https://github.com/MarkMile/sudoku-solver/blob/main/screenshots/filled_board.png?raw=true)<br>
-- Solved:
-
-    ![solved](https://github.com/MarkMile/sudoku-solver/blob/main/screenshots/solved.png?raw=true)
+![empty board](https://github.com/MarkMile/sudoku-solver/blob/main/screenshots/sudoku-solver-preview.gif)<br>
 
 ## 🛠️ Future Improvements
 
