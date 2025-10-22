@@ -57,7 +57,8 @@ This program uses a backtracking algorithm, a depth-first search technique that:
     `cd sudoku-solver`
 
 2. Install dependencies<br>
-    `pip install customtkinter`
+    `pip install customtkinter`<br>
+    `pip install pillow`
 
 3. Run the application<br>
     `python main.py`
