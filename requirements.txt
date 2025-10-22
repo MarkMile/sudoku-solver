@@ -1,0 +1,7 @@
+# Sudoku Solver - Requirements
+# Compatible with Python 3.8+
+# Tested with Python 3.11
+# Install using: pip install -r requirements.txt
+
+customtkinter==5.2.2
+Pillow==10.4.0
