@@ -42,7 +42,9 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 `├── input_validator.py  # Validates Sudoku inputs`<br>
 `│`<br>
 `├── icons/              # App icons`<br>
+`│   └── reset.png`<br>
 `├── screenshots/        # App screenshots`<br>
+`│   └── sudoku-solver-preview.gif`<br>
 `│`<br>
 `└── README.md`<br>
 
