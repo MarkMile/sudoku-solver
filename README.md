@@ -30,7 +30,7 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 - **Python** 3.x
 - **Tkinter** – for GUI backend
 - **CustomTkinter** – modern UI framework for Python (built on top of Tkinter)
-- **Pillow (PIL)** for any image loading or resizing
+- **Pillow (PIL)** - for image loading or resizing
 - **Algorithmic backtracking** – for puzzle solving
 
 ## 🗂️ Project Structure
