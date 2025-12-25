@@ -1,15 +1,14 @@
-# ---------------------------------
-# Validator: input rules & messages
-# ---------------------------------
+# input_validator.py
+# This module defines the InputValidator class for validating Sudoku cell inputs.
 
-from typing import Callable, Set, Dict, Tuple
+from typing import Callable, Tuple
 
 
 class InputValidator:
     """Encapsulates validation rules for a single Sudoku cell input."""
 
-    ALLOWED_VALUES: Set[str] = set("123456789")
-    MESSAGES: Dict[str, str] = {
+    ALLOWED_VALUES = set("123456789")
+    MESSAGES = {
         "solved": "Sudoku is solved. Reset the board for new entries.",
         "empty": "Please enter your numbers.",
         "invalid": "'{value}' is not a number. Enter a number from 1 to 9.",
@@ -19,6 +18,8 @@ class InputValidator:
 
     def __init__(self, is_solved_callback: Callable[[], bool]) -> None:
         """
+        Initialize the InputValidator with a callback to check if the puzzle is solved.
+        
         :param is_solved_callback: (Callable[[], bool]) True if the puzzle is solved, False otherwise.
         """
         self._is_solved: Callable[[], bool] = is_solved_callback
