@@ -19,7 +19,7 @@ class InputValidator:
     def __init__(self, is_solved_callback: Callable[[], bool]) -> None:
         """
         Initialize the InputValidator with a callback to check if the puzzle is solved.
-        
+
         :param is_solved_callback: (Callable[[], bool]) True if the puzzle is solved, False otherwise.
         """
         self._is_solved: Callable[[], bool] = is_solved_callback

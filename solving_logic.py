@@ -15,7 +15,7 @@ class SudokuSolver:
         """
         self.rows = 9
         self.cols = 9
-        self.puzzle = (puzzle if puzzle is not None else [[0] * 9 for _ in range(9)])
+        self.puzzle = puzzle if puzzle is not None else [[0] * 9 for _ in range(9)]
 
     def set_puzzle(self, puzzle: List[List[int]]) -> None:
         """
