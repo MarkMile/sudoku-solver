@@ -1,12 +1,11 @@
-# ------------------------------------------------
-# Solver: Solving Sudoku puzzle using backtracking
-# ------------------------------------------------
+# solving_logic.py
+# Pure logic for solving a 9x9 Sudoku puzzle.
 
 from typing import List, Tuple
 
 
 class SudokuSolver:
-    """Pure logic for solving a 9x9 Sudoku puzzle."""
+    """Encapsulates the logic for solving a 9x9 Sudoku puzzle using backtracking algorithm."""
 
     def __init__(self, puzzle: List[List[int]] = None) -> None:
         """
@@ -14,26 +13,23 @@ class SudokuSolver:
 
         :param puzzle: (List(List[int])) - 9x9 Sudoku puzzle.
         """
-        self.rows: int = 9
-        self.cols: int = 9
-        self.puzzle: List[List[int]] = (
-            puzzle if puzzle is not None else [[0] * 9 for _ in range(9)]
-        )
+        self.rows = 9
+        self.cols = 9
+        self.puzzle = (puzzle if puzzle is not None else [[0] * 9 for _ in range(9)])
 
     def set_puzzle(self, puzzle: List[List[int]]) -> None:
         """
-        Set the Sudoku puzzle by copying the given grid to avoid shared references.
+        Set a new Sudoku puzzle.
 
-        :param puzzle: (List[List[int]]) - A 9x9 Sudoku puzzle represented as nested list of integers.
+        :param puzzle: (List[List[int]]) - 9x9 Sudoku puzzle.
         """
-        self.puzzle: List[List[int]] = [row[:] for row in puzzle]
+        self.puzzle = [row[:] for row in puzzle]
 
     def find_empty_square(self) -> Tuple[int, int] | None:
         """
         Find first empty field and return its position (row, col) or None if there is no empty fields.
 
-        :return (row, col) | None: (Tuple[int, int]) | None - The position of the first empty field.
-                Returns None if there are no empty fields on the board.
+        :return (row, col) | None: (Tuple[int, int]) | None - Position of the empty square or None if no empty squares left.
         """
         for row in range(self.rows):
             for col in range(self.cols):
@@ -43,11 +39,11 @@ class SudokuSolver:
 
     def is_valid_position(self, number: int, position: Tuple[int, int]) -> bool:
         """
-        Check whether `number` placing at position (row, col) is valid and return True, False if invalid.
+        Check if a number can be placed at the given position without violating Sudoku rules.
 
         :param number: (int) - The number that the user has entered into the square.
         :param position: (Tuple[int, int]) - Position of the number on Sudoku board (row, column)
-        :return bool: True if its a valid position and False if its not.
+        :return bool: True if the number can be placed at the given position, False otherwise.
         """
         row, col = position
 
@@ -62,8 +58,8 @@ class SudokuSolver:
                 return False
 
         # Box check
-        box_row: int = (row // 3) * 3
-        box_col: int = (col // 3) * 3
+        box_row = (row // 3) * 3
+        box_col = (col // 3) * 3
         for r in range(box_row, box_row + 3):
             for c in range(box_col, box_col + 3):
                 if self.puzzle[r][c] == number and (r, c) != position:
@@ -73,9 +69,9 @@ class SudokuSolver:
 
     def solve(self) -> bool:
         """
-        Backtracking solver.
+        Solve the Sudoku puzzle using backtracking algorithm.
 
-        :return bool: True if solved, False if no solution.
+        :return bool: True if the puzzle is solved, False otherwise.
         """
         empty_square: None | Tuple[int, int] = self.find_empty_square()
         if not empty_square:

@@ -1,6 +1,5 @@
-# ---------------------------------
-# Entry point: Project entry point
-# ---------------------------------
+# main.py
+# Entry point for the Sudoku GUI application.
 
 from sudoku_gui import GUI
 

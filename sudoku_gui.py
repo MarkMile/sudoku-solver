@@ -1,6 +1,5 @@
-# ------------------------------------
-# GUI: CustomTkinter application class
-# ------------------------------------
+# sudoku_gui.py
+# Sudoku Solver graphical user interface.
 
 from PIL import Image
 import customtkinter as ctk
@@ -21,13 +20,13 @@ class GUI(ctk.CTk):
         self.configure(fg_color="#1b1d28")
 
         # Board size
-        self.number_of_rows: int = 9
-        self.number_of_cols: int = 9
+        self.number_of_rows = 9
+        self.number_of_cols = 9
 
         # State flag and data
-        self.is_solved: bool = False
+        self.is_solved = False
         self.sudoku_board: List[List[ctk.CTkEntry]] = []
-        self.sudoku_puzzle: List[List[int]] = [[0] * 9 for _ in range(9)]
+        self.sudoku_puzzle = [[0] * 9 for _ in range(9)]
 
         # Layout frames
         self._build_frames()
@@ -37,8 +36,8 @@ class GUI(ctk.CTk):
         self.frame_for_buttons: ctk.CTkFrame = self._create_buttons_frame()
 
         # Validator and solver
-        self.validator: InputValidator = InputValidator(lambda: self.is_solved)
-        # The registered Tkinter callback must return a boolean; we bridge it below.
+        self.validator = InputValidator(lambda: self.is_solved)
+        # Register the validation callback with Tkinter
         self._register_validator_callback()
 
         self.create_sudoku_board()
@@ -47,13 +46,11 @@ class GUI(ctk.CTk):
         self.reset_button: ctk.CTkButton = self.create_reset_button()
 
         # Solver instance (will be given the puzzle before solving)
-        self.solver: SudokuSolver = SudokuSolver()
+        self.solver = SudokuSolver()
 
     def _build_frames(self) -> None:
         """Create and place the main frames for the board and control buttons."""
-        self.board_frame: ctk.CTkFrame = ctk.CTkFrame(
-            master=self, fg_color="transparent"
-        )
+        self.board_frame = ctk.CTkFrame(master=self, fg_color="transparent")
         self.board_frame.grid(row=1, column=0, padx=50, pady=25)
 
     def _create_message_box(self) -> ctk.CTkLabel:
@@ -62,7 +59,7 @@ class GUI(ctk.CTk):
 
         :return message_box: (CTkLabel) - Configured and positioned message box.
         """
-        message_box: ctk.CTkLabel = ctk.CTkLabel(
+        message_box = ctk.CTkLabel(
             master=self,
             height=45,
             width=410,
@@ -81,7 +78,7 @@ class GUI(ctk.CTk):
 
         :return buttons_frame: (CTkFrame) - Frame to hold 'Solve' and 'Reset' buttons.
         """
-        buttons_frame: ctk.CTkFrame = ctk.CTkFrame(master=self, fg_color="transparent")
+        buttons_frame = ctk.CTkFrame(master=self, fg_color="transparent")
         buttons_frame.grid(row=2, column=0, padx=50, pady=(0, 40))
         return buttons_frame
 
@@ -119,8 +116,8 @@ class GUI(ctk.CTk):
 
                 # Add extra padding between 3x3 boxes for clearer grid visuals.
                 # CTkEntry.grid accepts either int or tuple for padx/pady.
-                pad_x: Tuple[int, int] | int = (3, 9) if j in (2, 5) else 3
-                pad_y: Tuple[int, int] | int = (3, 9) if i in (2, 5) else 3
+                pad_x = (3, 9) if j in (2, 5) else 3
+                pad_y = (3, 9) if i in (2, 5) else 3
 
                 sudoku_square.grid(row=i, column=j, padx=pad_x, pady=pad_y)
 
@@ -133,7 +130,7 @@ class GUI(ctk.CTk):
 
         :return sudoku_square: (CTkEntry) - Configured Sudoku square with validation.
         """
-        sudoku_square: ctk.CTkEntry = ctk.CTkEntry(
+        sudoku_square = ctk.CTkEntry(
             master=self.board_frame,
             width=40,
             height=40,
@@ -157,7 +154,7 @@ class GUI(ctk.CTk):
 
         :returns solve_button: (CTkButton) - Configured 'Solve' button.
         """
-        solve_button: ctk.CTkButton = ctk.CTkButton(
+        solve_button = ctk.CTkButton(
             master=self.frame_for_buttons,
             width=200,
             height=40,
@@ -177,13 +174,13 @@ class GUI(ctk.CTk):
 
         :return reset_button: (CTkButton) - Configured 'Reset' button.
         """
-        reset_icon: ctk.CTkImage = ctk.CTkImage(
+        reset_icon = ctk.CTkImage(
             light_image=Image.open("./icons/reset.png"),
             dark_image=Image.open("./icons/reset.png"),
             size=(25, 25),
         )
 
-        reset_button: ctk.CTkButton = ctk.CTkButton(
+        reset_button = ctk.CTkButton(
             master=self.frame_for_buttons,
             text="",
             width=50,
@@ -225,8 +222,8 @@ class GUI(ctk.CTk):
 
     def reset_the_board(self) -> None:
         """Reset the board to an empty state and reset styles/messages."""
-        self.is_solved: bool = False
-        self.sudoku_puzzle: List[List[int]] = [[0] * 9 for _ in range(9)]
+        self.is_solved = False
+        self.sudoku_puzzle = [[0] * 9 for _ in range(9)]
 
         for i in range(self.number_of_rows):
             for j in range(self.number_of_cols):
@@ -273,7 +270,7 @@ class GUI(ctk.CTk):
             return
 
         # Run the solver
-        solved: bool = self.solver.solve()
+        solved = self.solver.solve()
         if solved:
             self.sudoku_puzzle = [row[:] for row in self.solver.puzzle]
             self.mark_user_inputs()
