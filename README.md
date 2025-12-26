@@ -53,15 +53,19 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 
 ## 📦 Installation
 1. Clone the repository:<br>
-    `git clone https://github.com/MarkMile/sudoku-solver.git`<br>
-    `cd sudoku-solver`
-
+```bash
+git clone https://github.com/MarkMile/sudoku-solver.git
+cd sudoku-solver
+```
 2. Install dependencies<br>
-    `pip install customtkinter`<br>
-    `pip install pillow`
-
-3. Run the application<br>
-    `python main.py`
+```bash
+pip install customtkinter
+pip install pillow
+```
+4. Run the application<br>
+```bash
+python main.py
+```
 
 ## 🕹️ Controls
 | Action               | Description                             |
