@@ -36,19 +36,19 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 ## 🗂️ Project Structure
 ```bash
 `sudoku-solver/`<br>
-`│`<br>
-`├── main.py             # Launches the app`<br>
-`├── sudoku_gui.py       # Handles CustomTkinter GUI`<br>
-`├── solving_logic.py    # Backtracking solver logic`<br>
-`├── input_validator.py  # Validates Sudoku inputs`<br>
-`│`<br>
-`├── icons/              # App icons`<br>
-`│   └── reset.png`<br>
-`├── screenshots/        # App screenshots`<br>
-`│   └── sudoku-solver-preview.gif`<br>
-`│`<br>
-`├── requirements.txt    # Project dependencies`<br>
-`└── README.md`<br>
+│
+├── main.py             # Launches the app
+├── sudoku_gui.py       # Handles CustomTkinter GUI
+├── solving_logic.py    # Backtracking solver logic
+├── input_validator.py  # Validates Sudoku inputs
+│
+├── icons/              # App icons
+│   └── reset.png
+├── screenshots/        # App screenshots
+│   └── sudoku-solver-preview.gif
+│
+├── requirements.txt    # Project dependencies
+└── README.md
 ```
 
 ## 📦 Installation
