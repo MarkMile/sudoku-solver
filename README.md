@@ -35,7 +35,7 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 
 ## 🗂️ Project Structure
 ```bash
-`sudoku-solver/`<br>
+sudoku-solver/
 │
 ├── main.py             # Launches the app
 ├── sudoku_gui.py       # Handles CustomTkinter GUI
