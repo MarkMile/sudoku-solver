@@ -4,21 +4,14 @@ A visual **Sudoku solver** built with **Python** and **CustomTkinter**, featurin
 
 Designed for **Sudoku enthusiasts** who enjoy both playing and understanding how puzzles can be solved programmatically.
 
-## 💡 Project Motivation
-I’ve always enjoyed solving Sudoku puzzles — and so does my wife.
+## Features
+- **Modern GUI with CustomTkinter** – sleek, responsive, and user-friendly
+- **Backtracking Algorithm** – solves puzzles efficiently and recursively
+- **Input Validation** – checks if the entered puzzle follows Sudoku rules
+- **Solve & Reset Buttons** – simple and clean controls
+- **Modular Codebase** – clearly separated logic, GUI, and validation components
 
-This project started as a fun way for us to combine that shared interest with my love for programming.
-
-It became a great learning exercise in algorithm design, GUI development, and writing clean, modular Python code while building something enjoyable and interactive.
-
-## 🚀 Features
-- 🖥️ **Modern GUI with CustomTkinter** – sleek, responsive, and user-friendly
-- 🧠 **Backtracking Algorithm** – solves puzzles efficiently and recursively
-- 🧾 **Input Validation** – checks if the entered puzzle follows Sudoku rules
-- 🔘 **Solve & Reset Buttons** – simple and clean controls
-- 💡 **Modular Codebase** – clearly separated logic, GUI, and validation components
-
-## 🧩 How It Works
+## How It Works
 This program uses a backtracking algorithm, a depth-first search technique that:
 
 - Finds the first empty cell.
@@ -26,14 +19,14 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 - Checks if a placement is valid (no duplicates in row, column, or 3×3 box).
 - Continues recursively until the puzzle is solved or backtracks when stuck.
 
-## 🖥️ Technologies Used
+## Technologies Used
 - **Python** 3.x
 - **Tkinter** – for GUI backend
 - **CustomTkinter** – modern UI framework for Python (built on top of Tkinter)
 - **Pillow (PIL)** - for image loading or resizing
 - **Algorithmic backtracking** – for puzzle solving
 
-## 🗂️ Project Structure
+## Project Structure
 ```bash
 sudoku-solver/
 │
@@ -51,7 +44,7 @@ sudoku-solver/
 └── README.md
 ```
 
-## 📦 Installation
+## Installation
 1. Clone the repository:<br>
 ```bash
 git clone https://github.com/MarkMile/sudoku-solver.git
@@ -67,26 +60,18 @@ pip install pillow
 python main.py
 ```
 
-## 🕹️ Controls
+## Controls
 | Action               | Description                             |
 | -------------------- | --------------------------------------- |
-| 🖱️ **Click a cell** | Select a cell to input a number         |
-| 🔢 **Enter number**  | Fill a value in the selected cell       |
-| 🧩 **Solve**         | Automatically solves the current Sudoku |
-| 🔁 **Reset**         | Clears all cells and resets the board   |
+| **Click a cell** | Select a cell to input a number         |
+| **Enter number**  | Fill a value in the selected cell       |
+| **Solve**         | Automatically solves the current Sudoku |
+| **Reset**         | Clears all cells and resets the board   |
 
-## 📷 Preview
+## Preview
 
 ![empty board](https://github.com/MarkMile/sudoku-solver/blob/main/screenshots/sudoku-solver-preview.gif)<br>
 
-## 🛠️ Future Improvements
-
-- Sudoku puzzle generator
-- Difficulty levels
-- Timer and statistics
-- Highlight conflicts and possible candidates
-- Improved UI/UX with sound and animations
-
-## 🧑‍💻 Author
+## Author
 **Marko Miletic**<br>
-📫[LinkedIn](https://www.linkedin.com/in/marko1987/)
+[LinkedIn](https://www.linkedin.com/in/marko1987/)
