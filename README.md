@@ -34,7 +34,7 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 - **Algorithmic backtracking** – for puzzle solving
 
 ## 🗂️ Project Structure
-
+```bash
 `sudoku-solver/`<br>
 `│`<br>
 `├── main.py             # Launches the app`<br>
@@ -49,7 +49,7 @@ This program uses a backtracking algorithm, a depth-first search technique that:
 `│`<br>
 `├── requirements.txt    # Project dependencies`<br>
 `└── README.md`<br>
-
+```
 
 ## 📦 Installation
 1. Clone the repository:<br>
